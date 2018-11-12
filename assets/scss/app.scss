@@ -1,0 +1,201 @@
+/*!
+ * 
+ *
+ * Theme based in Bootstrap framework
+ * Author: David Barbosa
+ * Contact: https://www.linkedin.com/in/davidbarbosar/
+ */
+
+/**
+ * Table of Contents:
+ *
+ * 0.0 - SCSS Vars, Functions, Includes and Mixins
+ * 1.0 - Reset
+ * 2.0 - Repeatable Patterns / Fonts
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ * 5.0 - Navigation
+ * 6.0 - Content
+ * 7.0 - Sidebar
+ * 8.0 - Footer
+ * 9.0 - Modals
+ * 10.0 - Multisite
+ * 11.0 - Media Queries
+ * 12.0 - Print
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * 0.0 SCSS Vars, Functions and Mixins
+ * -----------------------------------------------------------------------------
+ */
+
+/* Includes */
+
+// Variables
+@import 'vars';
+
+// Fonts
+@import 'fonts';
+
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "../../node_modules/bootstrap-select/sass/bootstrap-select";
+
+/* Mixins */
+
+@mixin transition($transitionType, $time) {
+  -webkit-transition: $transitionType $time;
+     -moz-transition: $transitionType $time;
+      -ms-transition: $transitionType $time;
+       -o-transition: $transitionType $time;
+          transition: $transitionType $time;
+}
+
+@mixin translate($x, $y) {
+	-webkit-transform: translate($x, $y);
+	   -moz-transform: translate($x, $y);
+	    -ms-transform: translate($x, $y);
+	     -o-transform: translate($x, $y);
+	        transform: translate($x, $y);
+}
+
+@mixin rotate($value) {
+	-webkit-transform: rotate($value);
+	   -moz-transform: rotate($value);
+	    -ms-transform: rotate($value);
+	     -o-transform: rotate($value);
+	        transform: rotate($value);
+}
+
+@mixin transform-origin($x, $y, $z) {
+	-webkit-transform-origin: $x $y $z;
+	   -moz-transform-origin: $x $y $z;
+	    -ms-transform-origin: $x $y $z;
+	     -o-transform-origin: $x $y $z;
+	        transform-origin: $x $y $z;
+}
+
+@mixin animationOptions($duration, $delay) {
+	-webkit-animation-duration: $duration;
+	   -moz-animation-duration: $duration;
+	    -ms-animation-duration: $duration;
+	     -o-animation-duration: $duration;
+	        animation-duration: $duration;
+
+	-webkit-animation-delay: $delay;
+	   -moz-animation-delay: $delay;
+	    -ms-animation-delay: $delay;
+	     -o-animation-delay: $delay;
+	        animation-delay: $delay;
+}
+
+/**
+ * 1.0 Reset
+ *
+ * This theme is using Bootstrap, so Reset is not necessary.
+ * Just a few items for this theme.
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+/**
+ * 2.0 Repeatable Patterns / Fonts
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 3.0 Basic Structure
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 4.0 Header
+ * -----------------------------------------------------------------------------
+ */
+
+header { }
+
+/**
+ * 5.0 Navigation
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 6.0 Content
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 7.0 Sidebars
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 8.0 Footer
+ * -----------------------------------------------------------------------------
+ */
+
+footer.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px; /* Set the fixed height of the footer here */
+	line-height: 60px; /* Vertically center the text there */
+	background-color: #f5f5f5;
+}
+
+/**
+ * 9.0 Modals
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 10.0 Multisite
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 11.0 Media Queries
+ * -----------------------------------------------------------------------------
+ */
+
+@include media-breakpoint-up(xs) { }
+@include media-breakpoint-up(sm) { }
+@include media-breakpoint-up(md) { }
+@include media-breakpoint-up(lg) { }
+@include media-breakpoint-up(xl) { }
+
+@include media-breakpoint-down(xs) { }
+@include media-breakpoint-down(sm) { }
+@include media-breakpoint-down(md) { }
+@include media-breakpoint-down(lg) { }
+
+@include media-breakpoint-only(xs) { }
+@include media-breakpoint-only(sm) { }
+@include media-breakpoint-only(md) { }
+@include media-breakpoint-only(lg) { }
+@include media-breakpoint-only(xl) { }
+
+
+/**
+ * 12.0 Print
+ * -----------------------------------------------------------------------------
+ */
+
+@media print { }

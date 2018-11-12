@@ -1,0 +1,16 @@
+{
+    "require": {
+        "illuminate/database": "^5.7",
+        "twig/twig": "^2.5",
+        "filp/whoops": "^2.3"
+    },    
+    "autoload": {
+        "classmap": [
+			"app/models",
+            "app/core"
+		],
+        "files": [
+            "app/database.php"
+        ]
+    }
+}
