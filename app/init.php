@@ -5,6 +5,8 @@ define('INC_ROOT', dirname(__DIR__));
 // Require composer autoloader
 require_once INC_ROOT . '/vendor/autoload.php';
 
+define('REQUEST_METHOD', $_SERVER['REQUEST_METHOD']);
+
 //Root URL 
 define('HTTP_ROOT',
 	(isset($_SERVER["HTTPS"]) ? "https" : "http") . '://' .$_SERVER['HTTP_HOST'] .

@@ -20,4 +20,15 @@ class Login extends Controller
             'mood' => $mood
         ]);
     }
+
+    public function signin($params = [])
+    {
+        // $user = $this->model('user');
+        // $user->name = $name;
+        var_dump($params);
+        $this->view('login/index', [
+            // 'name' => $user->name,
+            // 'mood' => $mood
+        ]);
+    }
 }

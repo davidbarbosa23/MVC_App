@@ -61,7 +61,10 @@ class App
         }
 
         // Set parameters to either the array values or an empty array
-        $this->params = $url ? array_values($url) : [];
+        if (REQUEST_METHOD === 'POST')
+            $this->params = [$_POST];
+        else
+            $this->params = $url ? array_values($url) : [];
 
         // Call the chosen method on the chosen controller, passing
         // in the parameters array (or empty array if above was false)
