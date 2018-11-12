@@ -16,7 +16,7 @@ class Controller
      *
      * @return void
      */
-    public function view($viewName, $data)
+    public function view($viewName, $data = [])
     {
 		// Create a new view and display the parsed contents
         $view = new View($viewName, $data);

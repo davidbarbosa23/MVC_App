@@ -11,14 +11,15 @@ class Home extends Controller
      *
      * @return void
      */
-    public function index($name = 'David', $mood = 'Programmer')
+    public function index($params = [])
     {
         $user = $this->model('user');
-        $user->name = $name;
+        $user->name = isset($params[0]) ? $params[0] : 'David';
+        $user->description = isset($params[1]) ? $params[1] : 'developer';
 
         $this->view('home/index', [
             'name' => $user->name,
-            'mood' => $mood
+            'mood' => $user->description
         ]);
     }
 }

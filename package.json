@@ -1,10 +1,10 @@
 {
     "private": true,
     "scripts": {
+        "clear": "rm -r app/cache/*",
         "build-css": "node-sass assets/scss/app.scss public/assets/css/app.min.css --output-style compressed",
         "build-js": "browserify assets/js/app.js | uglifyjs > public/assets/js/app.min.js",
-        "build": "npm run build-css && npm run build-js",
-        "clear": "rm -r app/cache/*"
+        "build": "npm run build-css && npm run build-js"
     },
     "devDependencies": {
         "browserify": "^16.2.3",

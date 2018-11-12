@@ -13,12 +13,17 @@ $ composer install
 $ npm install
 ```
 
+After add/delete/rename files into `app/core` or `app/models` you need execute:
+```console
+$ composer dump-autoload
+```
+
 To edit JS or CSS files, please edit the assets files into `{DIRECTORY_PATH}/assets` folder, then execute:
 ```console
 $ npm run build
 ```
 
-This application use [twig/twig](https://packagist.org/packages/twig/twig), for this reason, some times we need clear cache after any update into layouts:
+This application use [twig/twig](https://packagist.org/packages/twig/twig), ([twig reference](https://github.com/vito/chyrp/wiki/Twig-Reference))for this reason, some times we need clear cache after any update into layouts:
 ```console
 $ npm run clear
 ```

@@ -5,7 +5,7 @@ class Session
     /**
      * Init Session
      */
-    public function init()
+    static public function init()
     {
         session_start();
     }
@@ -16,7 +16,7 @@ class Session
      * @param string $key
      * @param string $value
      */
-    public function add($key, $value)
+    static public function add($key, $value)
     {
         $_SESSION[$key] = $value;
     }
@@ -27,7 +27,7 @@ class Session
      * 
      * @return array 
      */
-    public function get($key)
+    static public function get($key)
     {
         return !empty($_SESSION[$key]) ? $_SESSION[$key] : null;
     }
@@ -37,7 +37,7 @@ class Session
      * 
      * @return array
      */
-    public function getAll()
+    static public function getAll()
     {
         return $_SESSION;
     }
@@ -47,7 +47,7 @@ class Session
      * 
      * @param string $key
      */
-    public function remove($key)
+    static public function remove($key)
     {
         if(!empty($_SESSION[$key]))
             unset($_SESSION[$key]);
@@ -56,7 +56,7 @@ class Session
     /**
      * Close and destroy all session
      */
-    public function close()
+    static public function close()
     {
         session_unset();
         session_destroy();
@@ -67,7 +67,7 @@ class Session
      * 
      * @return int
      */
-    public function getStatus()
+    static public function getStatus()
     {
         return session_status();
     }
