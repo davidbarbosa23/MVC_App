@@ -40,4 +40,4 @@ $ npm run clear
 ![alt text](http://52.36.70.7/assets/diagrama.jpg)
 
 #### Source
-Based in [alexgarrett/simple-mvc](https://github.com/alexgarrett/simple-mvc)
+Structure code based in [alexgarrett/simple-mvc](https://github.com/alexgarrett/simple-mvc)
