@@ -5,6 +5,8 @@ This is a test code for MVC Application as Senior PHP Developer
 
 ## How works
 
+Test running [here](http://52.36.70.7/)
+
 ### Database
 `MCV_App.sql` needs be inserted into an `utf8mb4_unicode_ci` collation database, after insert you can edit `app/database.php` with your DB access.
 
