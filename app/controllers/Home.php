@@ -1,9 +1,4 @@
 <?php
-
-/**
- * The default home controller, called when no controller/method has been passed
- * to the application.
- */
 class Home extends Controller
 {
     /**
@@ -13,13 +8,6 @@ class Home extends Controller
      */
     public function index($params = [])
     {
-        $user = $this->model('user');
-        $user->name = isset($params[0]) ? $params[0] : 'David';
-        $user->description = isset($params[1]) ? $params[1] : 'developer';
-
-        $this->view('home/index', [
-            'name' => $user->name,
-            'mood' => $user->description
-        ]);
+        $this->view('home/index');
     }
 }

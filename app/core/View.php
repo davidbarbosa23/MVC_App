@@ -42,6 +42,7 @@ class View
         $this->twig->addGlobal('APP_NAME', APP_NAME);
         $this->twig->addGlobal('ASSET_ROOT', ASSET_ROOT);
         $this->twig->addGlobal('HTTP_ROOT', HTTP_ROOT);
+        $this->twig->addGlobal('SESSION_USER', Session::isSetted('user'));
     }
 
     /**

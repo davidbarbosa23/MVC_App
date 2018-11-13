@@ -7,7 +7,14 @@ class Session
      */
     static public function init()
     {
-        session_start();
+        $dir = INC_ROOT . '/app/sessions';
+        if (!file_exists($dir) && !is_dir($dir))
+            mkdir($dir);
+
+        session_save_path($dir);
+
+        if (session_status() == PHP_SESSION_NONE)
+            session_start();
     }
 
     /**
@@ -19,6 +26,17 @@ class Session
     static public function add($key, $value)
     {
         $_SESSION[$key] = $value;
+    }
+
+    /**
+     * If is set session key
+     * @param  string  $key 
+     * 
+     * @return boolean 
+     */
+    static public function isSetted($key)
+    {
+        return isset($_SESSION[$key]);
     }
 
     /**
@@ -70,5 +88,15 @@ class Session
     static public function getStatus()
     {
         return session_status();
+    }
+
+    /**
+     * ID of session
+     * 
+     * @return string
+     */
+    static public function getID()
+    {
+        return session_id();
     }
 }

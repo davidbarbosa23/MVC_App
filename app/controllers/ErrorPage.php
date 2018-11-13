@@ -1,9 +1,4 @@
 <?php
-
-/**
- * The default home controller, called when no controller/method has been passed
- * to the application.
- */
 class ErrorPage extends Controller
 {
     /**

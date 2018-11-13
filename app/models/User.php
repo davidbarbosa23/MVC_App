@@ -11,6 +11,7 @@ class User extends Eloquent
     public $email;
     public $password;
 
+    // Illuminate\Database Vars
     protected $table = 'users';
-    protected $fillable = ['description', 'location', 'amount', 'name', 'email', 'password'];
+    public $fillable = ['description', 'location', 'amount', 'name', 'email', 'password', 'unique_id'];
 }

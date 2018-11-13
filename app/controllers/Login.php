@@ -1,12 +1,6 @@
 <?php
-
-/**
- * Login Controller
- */
 class Login extends Controller
 {
-    protected $user;
-
     /**
      * The default controller method.
      *
@@ -20,17 +14,21 @@ class Login extends Controller
     public function signin($params = [])
     {
         $message = 'Todos los campos son requeridos';
-        if (isset($params['email']) && !empty($params['email']) && isset($params['password']) && !empty($params['password']))
+        if ($this->verify($params))
         {
             $message = 'Usuario no encontrado';
             if ($user = User::where('email', '=', $params['email'])->first())
             {
                 $user = $user->toArray();
                 $message = 'Contraseña invalida';
-                if ($user['password'] === $params['password']) {
+                if (password_verify($params['password'], $user['password']))
+                {
                     unset($user['password']);
+                    unset($user['unique_id']);
                     $message = 'Éxito';
                     Session::add('user', $user);
+                    header('Location: ' . HTTP_ROOT . '/viewuser');
+                    exit();
                 }
 
             }
@@ -42,29 +40,14 @@ class Login extends Controller
         ]);
     }
 
-    public function forgot($params = [])
-    {
-        // $user = $this->model('user');
-        // $user->name = $name;
-        $this->view('login/forgot', [
-            // 'name' => $user->name,
-            // 'mood' => $mood
-        ]);
+    public function logout() {
+        Session::close();
+        header('Location: ' . HTTP_ROOT);
+        exit();
     }
-
-    public function reset($params = [])
-    {
-        // $user = $this->model('user');
-        // $user->name = $name;
-        $this->view('login/reset', [
-            // 'name' => $user->name,
-            // 'mood' => $mood
-        ]);
-    }
-
 
     private function verify($params = []) 
     {
-        return empty($params['email']) OR empty($params['password']);
+        return isset($params['email']) && !empty($params['email']) && isset($params['password']) && !empty($params['password']);
     }
 }

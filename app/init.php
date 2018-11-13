@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Bogota');
+
 define('APP_NAME', 'MVC App');
 
 // Root path for inclusion.
@@ -17,4 +19,3 @@ define('HTTP_ROOT',
 
 // Root path for assets
 define('ASSET_ROOT', HTTP_ROOT . '/assets');
-
