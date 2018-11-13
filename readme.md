@@ -11,7 +11,7 @@ Test running [here](http://52.36.70.7/)
 `MCV_App.sql` needs be inserted into an `utf8mb4_unicode_ci` collation database, after insert you can edit `app/database.php` with your DB access.
 
 ### Install
-You need run the below command before init the application:
+You need run the below command before clone the application:
 
 ```console
 $ cd {DIRECTORY_PATH}
