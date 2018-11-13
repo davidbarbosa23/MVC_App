@@ -36,5 +36,6 @@ This application use [twig/twig](https://packagist.org/packages/twig/twig), ([tw
 ```console
 $ npm run clear
 ```
+![alt text](https://raw.githubusercontent.com/davidbarbosa23/MVC_App/public/assets/diagrama.jpg)
 
 Based in [alexgarrett/simple-mvc](https://github.com/alexgarrett/simple-mvc)
