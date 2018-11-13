@@ -28,26 +28,27 @@ class Register extends Controller
         $continue = true;
         $params['unique_id'] = $this->uniqueID();
         $params['message'] = 'Todos los campos son requeridos';
-        if (User::where('email', '=', $params['email'])->first()) 
+        
+        if ($this->verify($params)) 
         {
-            $params['message'] = 'Usuario con el correo "' . $params['email'] . '" ya registrado';
-            $continue = false;
-        }
+        	if (User::where('email', '=', $params['email'])->first()) 
+        	{
+        		$params['message'] = 'Usuario con el correo "' . $params['email'] . '" ya registrado';
+        		$continue = false;
+        	}
 
-        if ($continue) 
-        {
-            if ($this->verify($params)) 
-            {
-                $params['message'] = 'Email inválido';
-                if (filter_var($params['email'], FILTER_VALIDATE_EMAIL)) {
-                    $params['message'] = 'La contraseña no coincide';
-                    if ($this->checkPass($params['password'], $params['confirmpassword'])) 
-                    {
-                        $params['message'] = 'Usuario creado, por favor ingrese <a href="' . HTTP_ROOT . '/login">aquí</a>';
-                        User::create($this->parseParams($params));
-                    }
-                }
-            }
+        	if ($continue) 
+        	{
+        		$params['message'] = 'Email inválido';
+        		if (filter_var($params['email'], FILTER_VALIDATE_EMAIL)) {
+        			$params['message'] = 'La contraseña no coincide';
+        			if ($this->checkPass($params['password'], $params['confirmpassword'])) 
+        			{
+        				$params['message'] = 'Usuario creado, por favor ingrese <a href="' . HTTP_ROOT . '/login">aquí</a>';
+        				User::create($this->parseParams($params));
+        			}
+        		}
+        	}
         }
 
         $this->view('register/index', $params);
