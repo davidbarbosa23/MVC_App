@@ -31,7 +31,7 @@
                         <span class="mx-2">David Barbosa</span> | 
                         <a target="_blank" href="https://www.linkedin.com/in/davidbarbosar/" class="text-muted mx-2">LinkedIn</a> | 
                         <a target="_blank" href="https://github.com/davidbarbosa23" class="text-muted mx-2">GitHub</a> | 
-                        <a target="_blank" href="{{ HTTP_ROOT }}/PHP-Developer.pdf" class="text-muted mx-2">Curriculum</a> | 
+                        <a target="_blank" href="{{ HTTP_ROOT }}/assets/PHP-Developer.pdf" class="text-muted mx-2">Curriculum</a> | 
                         <a target="_blank" href="mailto:davidbarbosa.dev@gmail.com" class="text-muted mx-2">davidbarbosa.dev@gmail.com</a> | 
                         <a target="_blank" href="tel:+573196124702" class="text-muted mx-2">(+57) 319 612 4702</a>
                     </div>
