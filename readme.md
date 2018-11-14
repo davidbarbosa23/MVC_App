@@ -28,7 +28,7 @@ $ composer dump-autoload
 ```
 
 ### Assets Changes
-To edit JS or CSS files, please edit the assets files into `{DIRECTORY_PATH}/assets` folder, then execute:
+To edit JS or CSS files, please edit the assets files into `assets` folder, then execute:
 ```console
 $ npm run build
 ```
