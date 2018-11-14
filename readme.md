@@ -18,6 +18,8 @@ $ cd {DIRECTORY_PATH}
 $ composer install
 $ npm install
 ```
+For access to public folder by the browser, you need hit to `public` folder.
+If you set a custom localhost url as `mvcapp.tx`, you can run the program instantly, otherwise, you need set the `RewriteBase /` into `public/.htaccess` with the folders after base url, like this: `RewriteBase /MVC_App/public` in case the url to access looks like this `http://localhost/MVC_App/public`.
 
 ### App Changes
 After add/delete/rename files into `app/core` or `app/models` you need execute:
