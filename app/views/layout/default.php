@@ -36,7 +36,7 @@
                         <a target="_blank" href="tel:+573196124702" class="text-muted mx-2">(+57) 319 612 4702</a>
                     </div>
                     <div class="col-3 text-right">
-    				    <a target="_blank" href="https://github.com/davidbarbosa23/MVC_App/blob/master/readme.md" class="d-inline-block text-muted mx-2">Readme</a>
+    				    <a target="_blank" href="https://github.com/davidbarbosa23/MVC_App/blob/master/README.md" class="d-inline-block text-muted mx-2">Readme</a>
                     </div>
                 </div>
 			</div>
